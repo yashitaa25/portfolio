@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9a348fc68b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="pictures/Yashita Agarwala.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul> 
+        </nav>
+        <div class="header-text";>
+            <p>2nd Year Student </p>
+            <h1>Hi, I'm <span>Yashita Agarwla</span><br> From India</h1>
+        </div>
+    </div>
+</div>
+<!------------about---------- ---->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="pictures/images 2222.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am a 2nd year student specilizing in  CSE big data analytics at SRM University KTR,Tamil Nadu
+                    I am a passionate individual who loves to explore beyond my capabilities while working in differnt sectors.
+                    Being an individual who can analyze well i have had the opportunity to work with different people in different projects which has led me 
+                    to take an interest in the domain.Having been someone who has a keen interest in learning,i have always wanted to 
+                    explore the horizons of technology. I firmly believe that there is no better way of learning than gaining hands-on 
+                    experience,and so i wish to have ample exposure to field work in corporating software technology.
+                </p>
+
+                       <div class="tab-titles">
+                        <p class="tab-links  active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                       </div>
+                       <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Designing Web/App interfaces</li>
+                            <li><span>Programming Languages</span><br>Python , C</li>
+                            <li><span>Soft Skills</span><br>Creativity,Observing Skills,Responsible,Problem Solving,Diligent,Analytic thinking</li>
+                        </ul>
+                       </div>
+                       <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>UI/UX</span><br>Contributed in developing user interface of an app under my esteemed college club </li>
+                            <li><span>Hackathon</span><br>Certificate of appreciation recieved for hackathon HACKOFIESTA</li>
+                            <li><span>Hackerrank and Leetcode</span><br>Earned badges in C,C++,Problem Solving</li>
+                            <a href="https://www.hackerrank.com/ya5345"> hackerrank link</a>
+                            <a href="https://leetcode.com/yashita011/">   leetcode link</a>  
+                            
+
+                        </ul>
+                       </div>
+                       <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - Current</span><br>Btech with specialization in big data analytics from SRM Institute of Science and Technology</li>
+                            <li><span>2109 - 2021</span><br>Senior Secondary from SAI International School,Bhubaneswar</li>
+                            <li><span>2016 - 2019</span><br>Completed 10th from SAI International School,Bhubaneswar</li>
+                        </ul>
+                       </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------contcts------------- -->
+<div id="contact"> 
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> yashitajgm@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i> 7909043045</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/yashita-agarwala-a410bb265?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/yashitaa25"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/invites/contact/?i=1wa7ov2u49ear&utm_content=p4j05xn"><i class="fa-brands fa-instagram"></i></a>
+                    
+                </div>
+                <a href=" "  download class="btn btn2"></a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; Yashita. Made using html and CSS</p>
+    </div>
+</div>
+<script>
+
+    var tablinks =document.getElementsByClassName("tab-links");
+    var tabcontents =document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyhCpKY_1SDlgsu0Q39VF7XuM9ittM4qx34BZh6N56xndvgKaVKDm7AaEd4lTCx8yfM/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg= document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML =""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
